@@ -23,7 +23,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
 
 
-          <Text style={styles.getStartedText}> Name</Text>
+          <Text style={styles.getStartedText}> Gaurav</Text>
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
             <MonoText>Personal Details</MonoText>
