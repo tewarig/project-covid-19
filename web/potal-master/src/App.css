@@ -1,0 +1,270 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+.Content{
+  margin-left: 120px;
+  z-index: 1;
+}
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  margin: 0;
+  padding: 0;
+
+
+}
+.Upnav{
+  top: -200px;
+  right: -200px;
+  position: absolute;
+    z-index: -1;
+  height: 10%;
+  width: 100%;
+  background-color: var(--bg-primary);
+  border-radius: 5%;
+  text-align: center;
+  z-index: -1;
+
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.navb0r {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  z-index: 1000;
+}
+
+.navb0r-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav4item {
+  width: 100%;
+}
+
+.nav4item:last-child {
+  margin-top: auto;
+}
+
+.na4-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.na4-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link4txt {
+  display: none;
+  margin-left: 1rem;
+}
+
+.na4-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #ff7eee;
+}
+
+.fa-secondary {
+  color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.log0 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.log0 svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.log0-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navb0r:hover .log0 svg {
+  transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navb0r {
+    bottom: 0;
+    width: 0rem;
+    height: 0rem;
+    right: 45%;
+  }
+  .na4-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+  }
+
+  .log0 {
+    display: none;
+  }
+
+  .navb0r-nav {
+    flex-direction: row;
+    height: 10px;
+
+  }
+
+
+  .Content{
+    margin-left: 10px;
+    margin-top: 26%;
+  }
+  .mobi{
+    position: absolute;
+    bottom: 100%;
+    right: 80%
+
+
+  }
+  .Upnav{
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    height: 12%;
+    width: 100%;
+    background-color: var(--bg-primary);
+    border-radius: 5%;
+    text-align: center;
+    z-index: -1;
+
+  }
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navb0r {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navb0r:hover {
+    width: 16rem;
+  }
+
+  .navb0r:hover .link4txt {
+    display: inline;
+  }
+
+  .navb0r:hover .log0 svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navb0r:hover .log0-text
+  {
+    left: 0px;
+  }
+}
+
+.dark {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8;
+  --bg-main:#d4fad4;
+
+}
+
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+  --bg-main: #f2dbda;
+}
+
+.solar {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --bg-main:#3f3f3f;
+
+
+}
+
+.theme-icon {
+  display:;
+}
+
+.dark #darkIcon {
+  display: block;
+}
+
+.light #lightIcon {
+  display: block;
+}
+
+.solar #solarIcon {
+  display: block;
+}
